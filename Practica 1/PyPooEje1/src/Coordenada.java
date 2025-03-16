@@ -14,7 +14,7 @@ public class Coordenada {
         this.y = y;
     }
 
-    // Constructor de copia agregado para evitar el error
+    // Constructor de copia
     public Coordenada(Coordenada c) {
         this.x = c.getX();
         this.y = c.getY();
@@ -36,6 +36,11 @@ public class Coordenada {
 
     public void setY(double y) {
         this.y = y;
+    }
+
+    // Distancia euclidiana entre dos coordenadas
+    public double distancia(Coordenada c) {
+        return Math.sqrt(Math.pow(this.x - c.x, 2) + Math.pow(this.y - c.y, 2));
     }
 
     // Representación en String de una coordenada
